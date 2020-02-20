@@ -1,7 +1,14 @@
-version: '3.7',
+# docker system prune -a --volumes
+version: '3.7'
 
 services: 
-    postgres: 
+    adminer:
+        image: adminer
+        restart: always
+        ports:
+            - 8080:8080
+
+    postgres:
         image: postgres
         environment: 
             POSTGRES_DB: nodeauth
@@ -10,5 +17,3 @@ services:
             - /private/var/lib/postgres:/var/lib/postgres
         ports: 
             - 5432:5432
-
-            # docker system prune -a --volumes
