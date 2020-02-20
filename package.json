@@ -1,4 +1,12 @@
 {
+  "name": "tdd-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js --ignore tests"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "pg": "^7.18.1",
