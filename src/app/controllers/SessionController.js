@@ -12,7 +12,7 @@ class SessionController {
             return res.status(401).json({ message: 'Incorrect email or password' });
         }
 
-        return res.json({ user });
+        return res.json({ user, token: user.generateToken() });
     }
 }
 
