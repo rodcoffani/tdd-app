@@ -1,9 +1,10 @@
-# TDD-app
-This is a project based on a Rocketseat's video about TDD, for the purpose of studying.\
     ![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.ippon.tech%2Fcontent%2Fimages%2F2018%2F08%2FTDD_Graphic.jpg&f=1&nofb=1)
 
+# TDD-app
+This is a project based on a Rocketseat's video about TDD, for the purpose of studying.
+
 ## Prerequisites
-You will need a database, docker (or Postgres) installed
+You will need a database, docker (or Postgres) installed.
  
 ## First steps
   - Install packages \
