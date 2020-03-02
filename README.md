@@ -12,9 +12,9 @@ You will need a database, docker (or Postgres) installed
       Create your .env file based on the `.env.example`. Then, create a .env for the tests named `.env.test` with the following data: __`DB_DIALECT=sqlite`__
   - Initialize the database \
       Run `docker-compose up` to set up the database. After this, run `yarn sequelize db:migrate`.
-      
-## Running
-To run the project, you can use `yarn start` or `npm start`.
 
 ## Testing
 For the tests, you can run `yarn test` or `npm t` to run them all. Or, you can use `jest` and the name of the file you want to test.
+      
+## Running
+To run the project, you can use `yarn start` or `npm start`.
