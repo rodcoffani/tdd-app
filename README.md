@@ -1,4 +1,4 @@
-    ![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.ippon.tech%2Fcontent%2Fimages%2F2018%2F08%2FTDD_Graphic.jpg&f=1&nofb=1)
+![Image](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fblog.ippon.tech%2Fcontent%2Fimages%2F2018%2F08%2FTDD_Graphic.jpg&f=1&nofb=1)
 
 # TDD-app
 This is a project based on a Rocketseat's video about TDD, for the purpose of studying.
