@@ -21,7 +21,6 @@ describe('Authentication', () => {
                 email: user.email,
                 password: '123123'
             });
-            console.log(response.body);
         
         expect(response.status).toBe(200);
     });
@@ -35,7 +34,6 @@ describe('Authentication', () => {
                 email: user.email,
                 password: '123456'
             });
-            console.log(response.body);
         
         expect(response.status).toBe(401);
     });
@@ -51,7 +49,34 @@ describe('Authentication', () => {
                  email: user.email,
                  password: '123123'
              });
-         console.log(response.body);
-         expect(response.body).toHaveProperty('token');
+
+             expect(response.body).toHaveProperty('token');
+    });
+
+    it('Should be able to access private routes when authenticated', async () => {
+        const user = await factory.create('User', {
+           password: '123123' 
+        });
+
+        const response = await request(app)
+            .get('/dashboard')
+            .set('Authorization', `Bearer ${user.generateToken()}`);
+
+        expect(response.status).toBe(200);
+    });
+
+    it('Should not be able to access private routes without jwt token', async () => {
+        const response = await request(app)
+            .get('/dashboard')
+            
+        expect(response.status).toBe(401);
+    });
+
+    it('Should not be able to access private routes with invalid jwt', async () => {
+        const response = await request(app)
+            .get('/dashboard')
+            .set('Authorization', `Bearer 123123`);
+
+        expect(response.status).toBe(401);
     });
 });
