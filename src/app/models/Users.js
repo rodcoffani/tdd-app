@@ -25,6 +25,5 @@ module.exports = (sequelize, DataTypes) => {
         return jwt.sign({ id: this.id }, process.env.APP_SECRET)
     }
     
-    
     return User;
 }
