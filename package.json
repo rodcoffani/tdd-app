@@ -16,7 +16,7 @@
     "factory-girl": "^5.0.4",
     "jsonwebtoken": "^8.5.1",
     "pg": "^7.18.1",
-    "sequelize": "^5.21.4"
+    "sequelize": "^6.28.2"
   },
   "devDependencies": {
     "dotenv": "^8.2.0",
